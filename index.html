@@ -14,6 +14,7 @@
         <div class="btn-container">
             <button class="btn color-btn">Change Colors 🎨</button>
             <button class="btn">Enter Our Love Story ✨</button>
+            <button class="btn1"> For You ✨</button>
         </div>
     </div>
     <p class="love-msg">Made with love, for my Wife💕</p>
@@ -55,6 +56,17 @@
             transition.style.opacity = '1';
             setTimeout(() => {
                 window.location.href = 'gallery.html'; // Change 'gallery.html' to the actual path of your gallery page
+            }, 1000);
+        });
+
+        //  New one 
+       
+
+        document.querySelector('.btn1:not(.color-btn1)').addEventListener('click', () => {
+            const transition = document.querySelector('.page-transition');
+            transition.style.opacity = '1';
+            setTimeout(() => {
+                window.location.href = 'next.html'; // Change 'gallery.html' to the actual path of your gallery page
             }, 1000);
         });
     </script>

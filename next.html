@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> My World </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="heart-container">
+    <svg class="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </svg>
+
+    <!-- First Line of Shayari (Appears first) -->
+    <div class="shayari-text">
+      <span class="word">Ooi</span>
+      <span class="word">En</span>
+      <span class="word">Thangameee,</span><br>
+
+      <span class="word">I</span>
+      <span class="word">have</span>
+      <span class="word">so</span>
+      <span class="word">much</span>
+      <span class="word">to</span>
+      <span class="word">say,</span><br>
+      <span class="word">but</span>
+      <span class="word">words</span>
+      <span class="word">fail</span>
+      <span class="word">to</span>
+      <span class="word">express</span>
+      <span class="word">it</span>
+      <span class="word">all.</span>
+    </div>
+
+   
+
+    <button class="propose-btn" onclick="window.location.href='book.html'">
+      So This is For You   ❤
+    </button>
+  </div>
+
+  <script>
+    const heartEmojis = ['💗', '💖', '💝', '💕', '♥️'];
+    const gradients = [
+        'linear-gradient(135deg, #ffafbd, #ffc3a0, #ffdde1)',
+        'linear-gradient(135deg, #e0c3fc, #8ec5fc, #c2e9fb)',
+        'linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4)',
+        'linear-gradient(135deg, #a18cd1, #fbc2eb, #fad0c4)',
+        'linear-gradient(135deg, #ffecd2, #fcb69f, #fad0c4)',
+    ];
+
+    let currentGradient = 0;
+
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart1');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 5 + 3 + 's';
+        heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+        document.body.appendChild(heart);
+
+        heart.addEventListener('animationend', () => {
+            heart.remove();
+        });
+    }
+
+    setInterval(createHeart, 600);
+
+    
+
+    </script>
+</body>
+
+</html>
